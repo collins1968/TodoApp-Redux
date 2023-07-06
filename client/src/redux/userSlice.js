@@ -20,8 +20,8 @@ export const userSlice = createSlice({
       localStorage.setItem('user', JSON.stringify(state));
     },
     logout: (state) => {
-      state.username = 'name';
-      state.email = 'email';
+      // state.username = 'name';
+      // state.email = 'email';
       localStorage.removeItem('user');
     },
    
@@ -29,7 +29,4 @@ export const userSlice = createSlice({
 });
 
 export const { login, logout} = userSlice.actions;
-
-export const selectUser = (state) => state.user;
-
 export default userSlice.reducer;
